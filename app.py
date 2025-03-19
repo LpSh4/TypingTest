@@ -1,6 +1,5 @@
 import tkinter as tk, os, time, random, json
 from PIL import Image, ImageTk
-from matplotlib.font_manager import json_dump
 
 def open_json(path):  #read JSON content from a file
     try:
@@ -286,7 +285,7 @@ class TypingTestApp:
             "cpm":  int(cpm),
             'accuracy': int(accuracy)
         }
-        json_dump(data, resource_path('./data.json'))
+        dump_json(data, resource_path('./data.json'))
         result_text = (f"Test Complete!\n" #Results
                        f"Accuracy: {accuracy:.2f}%\n"
                        f"WPM: {wpm:.2f}\n"
